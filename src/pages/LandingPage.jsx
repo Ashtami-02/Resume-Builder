@@ -5,8 +5,8 @@ function LandingPage() {
   return (
     <>
 
-      <section className='container-fluid first' style={{width:'100%' , overflow:'hidden' , height: '450px' , backgroundImage:"url('https://www.cpasitesolutions.com/cpa-websites/wp-content/uploads/2024/06/local-seo-for-bookeepers-1.png')" , backgroundAttachment:'fixed' , backgroundPosition:'top' , backgroundSize:'cover'}}>
-        <div className="row pt-5">
+      <section className='container-fluid first' style={{width:'100%' , overflow:'hidden' , height: '100vh' , backgroundImage:"url('https://www.cpasitesolutions.com/cpa-websites/wp-content/uploads/2024/06/local-seo-for-bookeepers-1.png')" , backgroundAttachment:'fixed' , backgroundPosition:'top' , backgroundSize:'cover'}}>
+        <div className="row pt-5" style={{marginTop:'120px'}}>
           <div className="col-12 col-md-4"></div>
           <div className="col-12 col-md-4 shadow border py-5 rounded my-5 text-center" style={{backgroundColor:'rgb(255,255,255,0.3)'}}>
             <h3>Designed to get hired.</h3>
