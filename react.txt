@@ -1,0 +1,98 @@
+
+            REACT - ADVANCED FRONTEND TECHNOLOGY
+        --------------------------------------------
+    
+    1. REACT : is JS Library for building faster UI for web application
+    2. Features of React 
+       - virtual DOM
+       - Reusable Components
+       - JSX
+    3. JSX(JavaScript XML) : is an JS extension for writing HTML codes, used in react to display contents in webpage
+       - JSX contains JSX elements :
+            const variablename = <starting-tag>content</ending-tag>
+       - Rules of JSX
+            1. Every JSX code must be inside a single tag, it can be a container tag / react fragments[(advantage : wont take much space in DOM)perillaatha tag] (<></>)
+            2. Every JSX tag must have closing tag.  <starting-tag>content</ending-tag> / self closing tag <tag-name/>
+            3. In JSX elements attributes or style properties / values must be in camel case (eg:fontSize [no space,no hyphen])
+            4. In JSX attributes like 'class' must be as "className" and 'for' as "htmlFor"
+            5. In JSX we can directly add js code using curly braces : {js code} 
+    4. React App creation :
+       - using vite : npm create vite@latest reactAppName -- --template react  
+    5. File & Folder structure 
+
+    6. React is a collection of Components, they are arranged in tree like structures .Root node of react is App Component.
+    7. Components : used to create UI, it can be an entire webpage or part of the webpage
+       - To create a componetns : create a file with filename that starts with Capital letters,also component name must be same as file name
+       - ways to create Components
+            - Functional Based / Stateless Component : use JS pure function to build component and it must return JSX
+            - Class Based / State full Component : use js class to build Component , it must have render method where we can give jsx code.
+    8. Life cyle methods of Component
+       - Mounting Phase : Putting JSX into DOM
+            - constructor()
+            - getDerivedStateFromProps()
+            - render()
+            - componentDidMount()
+       - Updating Phase : When COmponent get updated
+            - getDerivedStateFromProps()
+            - shouldComponentUpdate()
+            - render()
+            - getSnapshotBeforeUpdate()
+            - componentDidUpdate()
+       - Unmounting Phase : Removing Component from DOM
+            - componentWillUnmount()
+
+              Class Based Componenent                                                    Functional Based Component
+         ---------------------------------------------------------------------------------------------------------------------
+         1.  Uses js class to bulid component                                     1.  Uses js pure function
+         2.  Statefull Component                                                  2.  Stateless function
+         3.  Uses Constructor for initialising values                             3.  NO need of constructor
+         4.  Lifecycle methods are available                                      4.  Lifecycle methods not available
+
+
+    9. Styling React Components
+       - Using inline CSS : using style attributes
+            - syntax : style = {{properties:value,.......}}
+       - Using External CSS : using External css file
+       - Using CSS Module file : using .module.css extension file to define style using class selector.
+   10. Event Handling in React
+       - Binding function without argument : use function-name only to call the function
+       - Binding function with argument : call function use (event)=>function-name(event)
+   11. React props : used to share datas from parent Component to its child . In react only parents can share its data to its child.
+       - Props is properties of a Component
+       - Props is an object so data stored as key and value.
+       - parents can share its data to the child tag using its attributes
+       - using 'props' as child Component function argument, using props we can access data in child
+   12. Conditional Rendering : based on a condition we can control the visibility of jsx element , we can use ternary / truthy operator for that.
+   13. Handling List in react : To display list in jsx use 'map' array method. Use 'key' props to all uplicating jsx items in list , key must be unique and is used to identified by react DOM.
+   14. React state : used to store values in a Component, whenever state changes the Component also get re render.
+   15. React Hooks : are predefined function for enabling react component features in functional component, all hooks name will start with keyword "use" .
+       - How to use hooks in Functional component
+             - import hook in component
+             - call hook at top level of component
+       - Hooks can be of 2 types
+             - Predefined hooks
+             - Customised hooks : create a js file with name starts with "use", inside the file define js function to complete task
+       - Common Hooks
+             - useState : used to create state in Fucntional Component [very important]
+               syntax : useState(initialValue)
+             - useEffect : used to add side effects to a Component [Very important]
+               syntax : useEffect(effect,dependency)
+               - dependency : can be of 3 ways
+                 - no dependency : effect will apply all the time in component
+                 - empty array : effect will apply only at the creation of the component
+                 - [variable-name,...] : effect will apply not only at the creation of component but also variable changes in component
+             - useRef : used to store mutable data without re rendering the component , it also helps to get the reference of a html element into the component
+               syntax : useRef(initialValue)
+                 - it returns object called current 
+   16. Handling Form in recat : React handle input data mainly in 2 ways
+       - Controlled Component : here input data will store inside the component state , so component has more control over the form data
+       - Uncontrolled component : here component can get the refernce of input tag to get the input data, her component does not has more control over the form data
+   17. Set up Route/path/url to a component
+       - Install react-router-dom library : npm i react-router-dom 
+       - Set up path for component using react-router-dom
+         1. Entire react app must be render inside the 'BrowserRouter' of react-router-dom Library.
+         2. Place all component that needs to be setup path inside Routes component, inside Routes use Route component to set up path for component using its 'path' and 'element' attributes
+   18. Data Sharing Techniques in React
+       - State Lifting : To share data from one component to another by lifting the data to their common parent and parent can share the lifted state/data using props with its children.
+
+
